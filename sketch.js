@@ -1,3 +1,5 @@
+//CHANGE COLORS
+
 var data = [10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10];
 
 function setup() {
@@ -11,11 +13,17 @@ for (var i=0; i < data.length; i++){
   //var xPosn = 20;
   var yPosn = 300;
   var rectWidth = 30;
-  var rectHeight= -data[i]*10;
+  var rectHeight= data[i]*10;
 
   
 
-  var changeColorz = collidePointRect(mouseX, mouseY, xPosn, yPosn + rectHeight,rectWidth, -rectHeight);
+  var changeColorz = collidePointRect(
+    mouseX, 
+    mouseY, 
+    xPosn, 
+    yPosn,
+    rectWidth, 
+    rectHeight); //when mouse touches rectangles 
   
   
   	if(changeColorz){ 
