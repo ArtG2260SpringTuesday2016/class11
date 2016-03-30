@@ -17,7 +17,7 @@ myRect=
   noStroke();
   
 
-check = collidePointRect(mouseX,mouseY,this.x,this.y+this.height,this.weidth,-this.height);
+check = collidePointRect(mouseX,mouseY,this.x,this.y+this.height,this.width,-this.height);
 
 
 	if(check){ //change color!
