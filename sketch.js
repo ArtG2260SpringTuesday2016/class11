@@ -12,6 +12,12 @@ var myRect =function(){
       fill(color);
       rect(this.x,this.y,this.width,this.height);
     };
+    
+    this.isMouseOnRect=function(){
+      if(collidePointRect(mouseX,mouseY,this.x,this.y,this.width,this.height)){
+        this.color="#333"
+      }
+    }
 
 function setup() {
   createCanvas(700, 700);
