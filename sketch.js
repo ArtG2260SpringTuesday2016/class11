@@ -5,16 +5,19 @@ createCanvas(1000,600);
 }
 
 function draw(){
-
 for (var i=0; i < data.length; i++){
-  var xPosition = 20*(i+1);
-  var yPosition = 550;
-  var rectWidth = 18;
-  var rectHeight= -data[i]*5;
+
+myRect=
+  this.x = 20*(i+1);
+  this.y = 550;
+  this.width = 18;
+  this.height = -data[i]*5;
+
+
   noStroke();
   
 
-var check = collidePointRect(mouseX,mouseY,xPosition,yPosition+rectHeight,rectWidth,-rectHeight);
+check = collidePointRect(mouseX,mouseY,this.x,this.y+this.height,this.weidth,-this.height);
 
 
 	if(check){ //change color!
@@ -24,6 +27,17 @@ var check = collidePointRect(mouseX,mouseY,xPosition,yPosition+rectHeight,rectWi
 	}
 
 
-rect(xPosition, yPosition, rectWidth, rectHeight);
+rect(this.x, this.y, this.width, this.height);
+
+
+check = collidePointCircle(mouseX,mouseY,100,140,200,200);
+
+if(check){ //change color!
+		fill('blue')
+	}else{
+		fill('hotpink');
+	}
+	
+	ellipse(100,140,200,200);
 }
 }
