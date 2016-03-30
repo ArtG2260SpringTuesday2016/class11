@@ -3,8 +3,9 @@ var anarr = [];
 var anarrcol = [];
 
 isTouchingRect = function(x){
-  if(collidePointRect(mouseX, mouseY, x, x, x, x))
+  if(collidePointRect(mouseX, mouseY, x, x, x, x)){
   fill('black');
+}
 }
   
 renderrect = function(x){
