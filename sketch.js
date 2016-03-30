@@ -7,7 +7,7 @@ createCanvas(1000,600);
 function draw(){
 for (var i=0; i < data.length; i++){
 
-myRect=
+myRect= 
   this.x = 20*(i+1);
   this.y = 550;
   this.width = 18;
@@ -15,9 +15,9 @@ myRect=
 
 
   noStroke();
-  
 
-check = collidePointRect(mouseX,mouseY,this.x,this.y+this.height,this.width,-this.height);
+
+check = collidePointRect(mouseX,mouseY,myRect.x, myRect.y+myRect.height,myRect.width,-myRect.height);
 
 
 	if(check){ //change color!
@@ -27,7 +27,7 @@ check = collidePointRect(mouseX,mouseY,this.x,this.y+this.height,this.width,-thi
 	}
 
 
-rect(this.x, this.y, this.width, this.height);
+rect(myRect.x, myRect.y,myRect.width,myRect.height);
 
 
 check = collidePointCircle(mouseX,mouseY,100,140,200,200);
